@@ -84,5 +84,37 @@ toData()
 ## Chargement 
 
 ### Memory 
+```js
+ FromData(data)
+    {
+        const mydataOject = JSON.parse(data);
+        var taille = Object.keys(mydataOject.cards).length;
+        
+        this.#cards = [];
+        for(let i = 0; i< taille; i++ )
+        {
+            let newcard = new Card(mydataOject.cards[i].value);
+            this.#cards.push(newcard);
 
+        }
+
+    }
+```
+### SessionsSTorage 
+
+Avec localStorage, les deux onglets ont la même sauvegarde:
+
+![image](https://github.com/ThomyG07/LocalStorage/assets/93085354/91f4b132-c76b-4971-8d29-f51856a5b280)
+
+Avec sessionStorage, une sauvegarde est crée pour chaque session: 
+![image](https://github.com/ThomyG07/LocalStorage/assets/93085354/1fd976a9-c957-4118-9402-9e561f8a1b8d)
+
+
+![image](https://github.com/ThomyG07/LocalStorage/assets/93085354/88d2c4b5-819b-4f95-b1cf-9adfbe9156aa)
+
+## Bonus du developpeur
+
+![image](https://github.com/ThomyG07/LocalStorage/assets/93085354/201cf133-3809-40b6-a5a2-4a3579721b33)
+
+![image](https://github.com/ThomyG07/LocalStorage/assets/93085354/c21f6c45-14c8-403d-9108-230db032c9b3)
 
